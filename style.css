@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("img/world.png");
+}
+
+h1 {
+    font-family: Verdana, sans-serif;
+    margin: 10px auto;
+    color: gray;
+}
+
+p {
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: orange;
+}
+
+.quiz-area {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 16em;
+    min-height: 16em;
+    text-align: center;
+    border-radius: 10%;
+    perspective: 800px;
+}
+
+.front {
+    position: absolute;
+    background-color: #ffefd5;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: 1s;margin: 1%;
+    backface-visibility: hidden;
+    border-radius: 10%;
+}
+
+.back {
+    position: absolute;
+    background-color: #ff4f00;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: 1s;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    border-radius: 10%;
+}
+
+.back p {
+    color: white;
+}
+
+.wrap {
+    margin: 1%;
+}
+
+.wrap:hover .front {
+        transform: rotateY(180deg);
+    }
+
+.wrap:hover .back {
+    transform: rotateY(0deg);
+}
